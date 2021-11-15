@@ -10,6 +10,12 @@ ResetCamera()
 Sleep, 500
 ToggleQuickPrayers()
 Sleep, 500
+ToggleQuickPrayers()
+Sleep, 500
+ToggleRun()
+Sleep, 500
+ToggleRun()
+Sleep, 500
 SpecialAttack()
 Sleep, 500
 OpenCombatOptions()
