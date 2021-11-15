@@ -3,14 +3,15 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-#Include, inventory.ahk
+#Include, shop.ahk
 
 1::
 i := 1
-while i <= 28
+while i <= 40
 {
-	InventorySlotClick(i)
+	ShopClick(i)
 	Sleep, 250
 	i += 1
 }
+ShopClose()
 return
