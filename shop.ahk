@@ -19,11 +19,6 @@ ShopClick(slot)
 ; Close the UI by clicking on the X
 ShopClose()
 {
-	Random, xclick, 0, 44
-	Random, yclick, 0, 44
-	xclick += 1009
-	yclick += 85
-	; Click on X
-	BoomerangClick(xclick, yclick)
+	BoomerangHitboxClick(1009, 85, 44, 44)
 	return
 }

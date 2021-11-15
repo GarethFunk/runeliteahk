@@ -10,3 +10,13 @@ BoomerangClick(x, y)
 	MouseMove, %xpos%, %ypos%
 	return
 }
+
+BoomerangHitboxClick(x, y, hitbox_w, hitbox_h)
+{
+	Random, xclick, 0, %hitbox_w%
+	Random, yclick, 0, %hitbox_h%
+	xclick += x
+	yclick += y
+	BoomerangClick(xclick, yclick)
+	return
+}

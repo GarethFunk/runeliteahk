@@ -14,18 +14,13 @@
 ; hitbox_y 
 ItemInventoryClick(index, grid_x, grid_y, space_x, space_y, origin_x, origin_y, hitbox_x, hitbox_y)
 {
-	Random, xclick, 0, %hitbox_x%
-	Random, yclick, 0, %hitbox_y%
 	; Calculate position of top left of slot hitbox within grid
 	slot_x := Mod(index, grid_x) * (hitbox_x + space_x)
 	slot_y := (index // grid_x) * (hitbox_y + space_y)
 	; Adjust for origin coordinates
 	slot_x += origin_x
 	slot_y += origin_y
-	; Combine with random variables
-	xclick += slot_x
-	yclick += slot_y
 	; Click on slot
-	BoomerangClick(xclick, yclick)
+	BoomerangHitboxClick(slot_x, slot_y, hitbox_x, hitbox_y)
 	return
 }
