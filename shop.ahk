@@ -2,6 +2,7 @@
 #Warn  ; Enable warnings to assist with detecting common errors.
 
 #Include, item_inventory_clicking.ahk
+#include, boomerangclick.ahk
 
 ; Slots 1 to 40, top left to bottom right
 ; Origin is 204, 153
