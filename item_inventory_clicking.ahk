@@ -1,6 +1,8 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 
+#include boomerangclick.ahk
+
 ; index - 0 indexed
 ; grid_x - grid slot dimensions e.g. backpack is 4 x 8
 ; grid_y 
@@ -12,7 +14,6 @@
 ; hitbox_y 
 ItemInventoryClick(index, grid_x, grid_y, space_x, space_y, origin_x, origin_y, hitbox_x, hitbox_y)
 {
-	MouseGetPos, xpos, ypos
 	Random, xclick, 0, %hitbox_x%
 	Random, yclick, 0, %hitbox_y%
 	; Calculate position of top left of slot hitbox within grid
@@ -25,8 +26,6 @@ ItemInventoryClick(index, grid_x, grid_y, space_x, space_y, origin_x, origin_y, 
 	xclick += slot_x
 	yclick += slot_y
 	; Click on slot
-	Click, %xclick% %yclick%
-	; Return cursor to orignal pos
-	MouseMove, %xpos%, %ypos%
+	BoomerangClick(xclick, yclick)
 	return
 }

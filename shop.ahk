@@ -18,14 +18,11 @@ ShopClick(slot)
 ; Close the UI by clicking on the X
 ShopClose()
 {
-	MouseGetPos, xpos, ypos
 	Random, xclick, 0, 44
 	Random, yclick, 0, 44
 	xclick += 1009
 	yclick += 85
 	; Click on X
-	Click, %xclick% %yclick%
-	; Return cursor to orignal pos
-	MouseMove, %xpos%, %ypos%
+	BoomerangClick(xclick, yclick)
 	return
 }
