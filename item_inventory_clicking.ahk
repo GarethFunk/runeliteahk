@@ -24,7 +24,7 @@ ItemInventoryClick(index, grid_x, grid_y, space_x, space_y, origin_x, origin_y, 
 	return BoomerangHitboxClick(slot_x, slot_y, hitbox_x, hitbox_y, rightclick)
 }
 
-ItemInvetoryRightClick(item_index, menu_index,  grid_x, grid_y, space_x, space_y, origin_x, origin_y, hitbox_x, hitbox_y)
+ItemInventoryRightClick(item_index, menu_index,  grid_x, grid_y, space_x, space_y, origin_x, origin_y, hitbox_x, hitbox_y)
 {
 	; Right-click the inventory item
 	clicked_coords:= ItemInventoryClick(item_index, grid_x, grid_y, space_x, space_y, origin_x, origin_y, hitbox_x, hitbox_y, true)
