@@ -14,3 +14,9 @@ BackpackClick(slot)
 	slot -= 1 ; Adjust to zero index
 	ItemInventoryClick(slot, 4, 8, 21, 9, 1200, 454, 64, 64)
 }
+
+BackpackRightClick(slot, menu_item)
+{
+	slot -= 1 ; Adjust to zero index
+	ItemInvetoryRightClick(slot, menu_item, 4, 8, 21, 9, 1200, 454, 64, 64)
+}
