@@ -5,23 +5,25 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #Include, backpack.ahk
 
-; Requires camera at max zoom, pointing north
+; View requirements:
+; Camera facing west, at lowest possible angle, max zoom in
+; Inventory Requirements:
+; Slot 1 free fro coin pouchs
+; Food in Slots 2 - N 
+; Specify N below
+
+
+; Spam click on 1
+; Open coin pouch on 2
+; Eat next cake on 3
+
+pickpocketing:=False
+
 ClickKnight()
 {
-    PixelSearch, px, py, 341, 599, 814, 601, 0xffff00, 0, Fast 
-    if ErrorLevel
-    {
-        OutputDebug, Knight location not found
-    }
-    else
-    {
-        ;OutputDebug, Knight found at anchor X%Px% Y%Py%.
-        Px += 59
-        Py -= 72
-        MouseMove, %Px%, %Py%, 25
-        Sleep, 100 ; Wait for cursor to catch up with click action
-        Click
-    }
+    Click
+    Random, slep, 600, 900
+    Sleep, %slep% ; Wait for cursor to catch up with click action
     return
 }
 
@@ -40,64 +42,56 @@ CheckStunned()
     return False
 }
 
-1::
-stun_count:=0
-pickpocket_count:=0
-cake_count:=15
-Loop
+OpenPouch()
 {
-    if GetKeyState("2")
+    ; Open coin pouches
+    global pickpocketing = False
+    BackpackClick(1)
+    return
+}
+
+EatCake()
+{
+    global pickpocketing = False
+    static eat_count:=0
+    first_cake_slot:=2
+    final_cake_slot:=21
+    cake_slot:= floor(first_cake_slot + (eat_count / 3))
+    if(cake_slot <= final_cake_slot)
     {
-        Break
-    }
-    Random, s, 100, 300
-    Sleep, %s%
-    is_stunned:= CheckStunned()
-    if (is_stunned = True)
-    {
-        stun_count +=1
-        OutputDebug, Stunned
-        Sleep, 2000
-        if(stun_count >= 5)
-        {
-            ; Lost 12hp -> Eat a cake
-            if(cake_count <= 0)
-            {
-                MsgBox, Out of cakes!
-                Break
-            }
-            else
-            {
-                OutputDebug, 4 hits counted: eating one cake
-                ; First cake is in slot 
-                next_cake_slot:= 17 - cake_count
-                BackpackClick(next_cake_slot)
-                Sleep, 2000
-                BackpackClick(next_cake_slot)
-                Sleep, 2000
-                BackpackClick(next_cake_slot)
-                Sleep, 500
-                cake_count -= 1
-                stun_count = 0
-            }
-        }
-        else
-        {
-            Random, o, 0, 48
-            if(o < pickpocket_count)
-            {
-                ; Open coin pouches
-                BackpackClick(1)
-                pickpocket_count = 0
-            }
-            Sleep, 3000
-        }
+        BackpackClick(cake_slot)
+        eat_count += 1
     }
     else
     {
-        OutputDebug, Not Stunned: Attempting pickpocket
+        MsgBox, Out of cakes!
+        eat_count = 0
+    }
+    return
+}
+
+1::
+global pickpocketing = True
+Loop
+{
+    if(pickpocketing)
+    {
         ClickKnight()
-        pickpocket_count += 1
+    }
+    else
+    {
+        Break
     }
 }
 return
+
+2::
+OpenPouch()
+return
+
+3::
+EatCake()
+return
+
+Esc::
+global pickpocketing = False
