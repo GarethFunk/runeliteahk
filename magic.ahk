@@ -15,19 +15,22 @@ SpellClick(slot)
 	ItemInventoryClick(slot, 7, 10, 24, 20, 1180, 447, 28, 28)
 }
 
+BonesToBananas()
+{
+    SpellClick(10)
+}
+
 TelekineticGrab()
 {
     SpellClick(20)
+}
+
+TeleCamelot()
+{
+    SpellClick(27)
 }
 
 HighAlchemy()
 {
     SpellClick(35)
 }
-
-1::
-TelekineticGrab()
-;HighAlchemy()
-
-
-
