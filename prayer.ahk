@@ -33,21 +33,3 @@ ProtectFromMelee()
 {
     PrayerClick(19)
 }
-
-1::
-    ProtectFromMagic()
-    return
-
-2::
-    ProtectFromRanged()
-    return
-
-3::
-    ProtectFromMelee()
-    return
-
-
-
-
-
-
