@@ -39,4 +39,5 @@ ItemInventoryRightClick(item_index, menu_index,  grid_x, grid_y, space_x, space_
  	ItemInventoryClick(menu_index, 1, 0, 0, 1, menu_origin_x, menu_origin_y, 0, 29)
  	; Return cursor to orignal position
 	MouseMove, clicked_coords["xstart"], clicked_coords["ystart"]
+	return
 }

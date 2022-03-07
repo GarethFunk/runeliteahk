@@ -17,19 +17,23 @@ PrayerClick(slot)
 	ItemInventoryClick(slot, 5, 5, 10, 10, 1176, 456, 64, 64)
     Sleep 50
     Send {Esc}  ; Requires F1 to be configures as Invetory tab in game settings
+    return
 }
 
 ProtectFromMagic()
 {
     PrayerClick(17)
+    return
 }
 
 ProtectFromRanged()
 {
     PrayerClick(18)
+    return
 }
 
 ProtectFromMelee()
 {
     PrayerClick(19)
+    return
 }

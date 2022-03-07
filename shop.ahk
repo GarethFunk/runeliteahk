@@ -43,6 +43,7 @@ ShopBuy(slot, quantity)
 		}
 		Sleep, 250 ; allow time to process - server interaction
 	}
+	return
 }
 
 ; Close the UI by clicking on the X
