@@ -20,13 +20,109 @@ PrayerClick(slot)
     return
 }
 
+ThickSkin()
+{
+    PrayerClick(1)
+    return
+}
+
+BurstOfStrength()
+{
+    PrayerClick(2)
+    return
+}
+
+ClarityOfThought()
+{
+    PrayerClick(3)
+    return
+}
+
+SharpEye()
+{
+    PrayerClick(4)
+    return
+}
+
+MysticWill()
+{
+    PrayerClick(5)
+    return
+}
+
+RockSkin()
+{
+    PrayerClick(6)
+    return
+}
+
+SuperhumanStrength()
+{
+    PrayerClick(7)
+    return
+}
+
+ImprovedReflexes()
+{
+    PrayerClick(8)
+    return
+}
+
+RapidRestore()
+{
+    PrayerClick(9)
+    return
+}
+
+RapidHeal()
+{
+    PrayerClick(10)
+    return
+}
+
+ProtectItem()
+{
+    PrayerClick(11)
+    return
+}
+
+HawkEye()
+{
+    PrayerClick(12)
+    return
+}
+
+MysticLore()
+{
+    PrayerClick(13)
+    return
+}
+
+SteelSkin()
+{
+    PrayerClick(14)
+    return
+}
+
+UltimateStrength()
+{
+    PrayerClick(15)
+    return
+}
+
+IncredibleReflexes()
+{
+    PrayerClick(16)
+    return
+}
+
 ProtectFromMagic()
 {
     PrayerClick(17)
     return
 }
 
-ProtectFromRanged()
+ProtectFromMissiles()
 {
     PrayerClick(18)
     return
@@ -35,5 +131,65 @@ ProtectFromRanged()
 ProtectFromMelee()
 {
     PrayerClick(19)
+    return
+}
+
+EagleEye()
+{
+    PrayerClick(20)
+    return
+}
+
+MysticMight()
+{
+    PrayerClick(21)
+    return
+}
+
+Retribution()
+{
+    PrayerClick(22)
+    return
+}
+
+Redemption()
+{
+    PrayerClick(23)
+    return
+}
+
+Smite()
+{
+    PrayerClick(24)
+    return
+}
+
+Preserve()
+{
+    PrayerClick(25)
+    return
+}
+
+Chivalry()
+{
+    PrayerClick(26)
+    return
+}
+
+Piety()
+{
+    PrayerClick(27)
+    return
+}
+
+Rigour()
+{
+    PrayerClick(28)
+    return
+}
+
+Augury()
+{
+    PrayerClick(29)
     return
 }
