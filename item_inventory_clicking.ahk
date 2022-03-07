@@ -1,7 +1,7 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 
-#include boomerangclick.ahk
+#Include boomerangclick.ahk
 
 ; index - 0 indexed
 ; grid_x - grid slot dimensions e.g. backpack is 4 x 8

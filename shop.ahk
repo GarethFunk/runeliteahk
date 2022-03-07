@@ -1,8 +1,8 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 
-#Include, item_inventory_clicking.ahk
-#include, boomerangclick.ahk
+#Include item_inventory_clicking.ahk
+#Include boomerangclick.ahk
 
 ShopBuy(slot, quantity)
 {

@@ -3,9 +3,9 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-#include, shop.ahk
-#include, interface.ahk
-#include, backpack.ahk
+#Include shop.ahk
+#Include interface.ahk
+#Include backpack.ahk
 
 1::
 ; Buy 10 sand

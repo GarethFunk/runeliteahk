@@ -1,7 +1,7 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 
-#Include, item_inventory_clicking.ahk
+#Include item_inventory_clicking.ahk
 
 ; Slots 1 to 28, top left to bottom right
 ; Inventory hitboxes are 64x64 squares
