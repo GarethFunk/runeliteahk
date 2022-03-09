@@ -17,14 +17,14 @@ ToggleQuickPrayers()
 
 ToggleRun()
 {
-	BoomerangHitboxClick(1120, 252, 97, 49)
+	BoomerangHitboxClick(1169, 252, 40, 40)
 	return
 }
 
 SpecialAttack()
 {
 	; Unvalidated coordinates
-	BoomerangHitboxClick(1135, 372, 94, 45)
+	BoomerangHitboxClick(1213, 302, 40, 40)
 	return
 }
 
