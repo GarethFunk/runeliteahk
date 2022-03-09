@@ -24,13 +24,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     return
 }
 
-XButton1::
+XButton2::
 {
     Augury()
     return
 }
 
-XButton2::
+XButton1::
 {
     Rigour()
     return
