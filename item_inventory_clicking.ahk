@@ -12,7 +12,7 @@
 ; origin_y 
 ; hitbox_x - hitbox dimensions
 ; hitbox_y 
-ItemInventoryClick(index, grid_x, grid_y, space_x, space_y, origin_x, origin_y, hitbox_x, hitbox_y, rightclick:=false)
+ItemInventoryClick(index, grid_x, grid_y, space_x, space_y, origin_x, origin_y, hitbox_x, hitbox_y, rightclick:=false, shiftclick:=false)
 {
 	; Calculate position of top left of slot hitbox within grid
 	slot_x := Mod(index, grid_x) * (hitbox_x + space_x)
@@ -21,7 +21,7 @@ ItemInventoryClick(index, grid_x, grid_y, space_x, space_y, origin_x, origin_y, 
 	slot_x += origin_x
 	slot_y += origin_y
 	; Click on slot
-	return BoomerangHitboxClick(slot_x, slot_y, hitbox_x, hitbox_y, rightclick)
+	return BoomerangHitboxClick(slot_x, slot_y, hitbox_x, hitbox_y, rightclick, shiftclick)
 }
 
 ItemInventoryRightClick(item_index, menu_index,  grid_x, grid_y, space_x, space_y, origin_x, origin_y, hitbox_x, hitbox_y)
