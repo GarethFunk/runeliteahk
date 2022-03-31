@@ -12,13 +12,13 @@
 BackpackClick(slot)
 {
 	slot -= 1 ; Adjust to zero index
-	ItemInventoryClick(slot, 4, 8, 21, 9, 1200, 454, 64, 64)
+	ItemInventoryClick(slot, 4, 8, 29, 17, 1200, 454, 56, 56)
 	return
 }
 
 BackpackRightClick(slot, menu_item)
 {
 	slot -= 1 ; Adjust to zero index
-	ItemInventoryRightClick(slot, menu_item, 4, 8, 21, 9, 1200, 454, 64, 64)
+	ItemInventoryRightClick(slot, menu_item, 4, 8, 29, 17, 1200, 454, 56, 56)
 	return
 }
