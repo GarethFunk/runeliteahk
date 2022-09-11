@@ -9,16 +9,9 @@
 ; 9px gap in y
 ; origin is 1200, 454
 
-BackpackClick(slot)
+BackpackClick(slot, shiftclick=false)
 {
 	slot -= 1 ; Adjust to zero index
-	ItemInventoryClick(slot, 4, 8, 10, 7, 1371, 588, 53, 47)
-	return
-}
-
-BackpackRightClick(slot, menu_item)
-{
-	slot -= 1 ; Adjust to zero index
-	ItemInventoryRightClick(slot, menu_item, 4, 8, 10, 7, 1371, 588, 53, 47)
+	ItemInventoryClick(slot, 4, 8, 10, 7, 1371, 588, 53, 47, false, shiftclick)
 	return
 }
