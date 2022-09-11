@@ -48,25 +48,25 @@ OpenQuestList()
 
 OpenBackpack()
 {
-	BoomerangHitboxClick(1314, 370, 85, 65)
+	Send {ESC}
 	return
 }
 
 OpenWornEquipment()
 {
-	BoomerangHitboxClick(1400, 370, 56, 65)
+	Send {F1}
 	return
 }
 
 OpenPrayerMenu()
 {
-	BoomerangHitboxClick(1457, 370, 56, 65)
+	Send {F2}
 	return
 }
 
 OpenMagicMenu()
 {
-	BoomerangHitboxClick(1514, 370, 59, 65)
+	Send {F3}
 	return
 }
 
