@@ -6,51 +6,47 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include shop.ahk
 #Include interface.ahk
 #Include backpack.ahk
+#Include lunars.ahk
 
 1::
+; Sell lantern lenses
+BackpackRightClick(1, 5)
+Sleep, 600
 ; Buy 10 sand
 ShopBuy(21, 10)
-Sleep, 500
+Sleep, 600
 ; Buy 10 soda ash
 ShopBuy(23, 10)
-Sleep, 500
+Sleep, 600
 ; Close shop
 ShopClose()
-Sleep, 500
-; Run On
-ToggleRun()
-Sleep, 500
+Sleep, 600
 ; Open Inventory
 OpenBackpack()
 return
 
 2::
-; Run Off
-ToggleRun()
-Sleep, 500
+; Open spellbook2
+OpenMagicMenu()
+Sleep, 600
+; Cast superglass make
+SuperglassMake()
+Sleep, 1200
+; Open Inventory
+OpenBackpack()
+Sleep, 600
 ; Use glassblowing pipe...
 BackpackClick(21)
-Sleep, 500
+Sleep, 600
 ; ... on molten glass
-BackpackClick(17)
-Sleep, 1000 ; wait for interface to open
+BackpackClick(1)
+Sleep, 1200 ; wait for interface to open
 ; Choose opetion 7
 Send, 7
 return
 
 3::
-; Sell 10 buckets
-BackpackRightClick(10, 4)
-Sleep, 500
-; Sell 10 lantern lenses
-BackpackRightClick(11, 4)
-Sleep, 500
-; Close shop
-ShopClose()
-Sleep, 500
-; Open world hop dialogue
-OpenLogout()
-Sleep, 500
+; World hop
+send, ^+{RIGHT}
 return
 
-ESC::suspend
