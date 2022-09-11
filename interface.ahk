@@ -30,19 +30,19 @@ SpecialAttack()
 
 OpenCombatOptions()
 {
-	BoomerangHitboxClick(1130, 370, 71, 65)
+	Send {F1}
 	return
 }
 
 OpenSkills()
 {
-	BoomerangHitboxClick(1202, 370, 56, 65)
+	Send {F2}
 	return
 }
 
 OpenQuestList()
 {
-	BoomerangHitboxClick(1257, 370, 56, 65)
+	Send {F3}
 	return
 }
 
@@ -54,60 +54,60 @@ OpenBackpack()
 
 OpenWornEquipment()
 {
-	Send {F1}
+	Send {F4}
 	return
 }
 
 OpenPrayerMenu()
 {
-	Send {F2}
+	Send {F5}
 	return
 }
 
 OpenMagicMenu()
 {
-	Send {F3}
+	Send {F6}
 	return
 }
 
 OpenGroupingMenu()
 {
-	BoomerangHitboxClick(1128, 970, 71, 65)
+	Send {F7}
 	return
 }
 
 OpenFriendsList()
 {
-	BoomerangHitboxClick(1200, 970, 56, 65)
+	Send {F8}
 	return
 }
 
 OpenAccountManagement()
 {
-	BoomerangHitboxClick(1257, 970, 56, 65)
+	Send {F9}
 	return
 }
 
 OpenLogout()
 {
-	BoomerangHitboxClick(1314, 970, 85, 65)
+	; Default keybinds does not bind logout key
 	return
 }
 
 OpenSettings()
 {
-	BoomerangHitboxClick(1400, 970, 56, 65)
+	Send {F10}
 	return
 }
 
 OpenEmotes()
 {
-	BoomerangHitboxClick(1457, 970, 56, 65)
+	Send {F11}
 	return
 }
 
 OpenMusicPlayer()
 {
-	BoomerangHitboxClick(1514, 970, 59, 65)
+	Send {F12}
 	return
 }
