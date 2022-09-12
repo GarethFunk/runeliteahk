@@ -16,7 +16,7 @@ ShopBuy(slot)
 	shop_origin_y:= 242
 	shop_hitbox_x:= 43
 	shop_hitbox_y:= 45
-	ItemInventoryClick(slot, menu_item_buy1, shop_grid_x, shop_grid_y, shop_space_x, shop_space_y, shop_origin_x, shop_origin_y, shop_hitbox_x, shop_hitbox_y, false, true)
+	ItemInventoryClick(slot, shop_grid_x, shop_grid_y, shop_space_x, shop_space_y, shop_origin_x, shop_origin_y, shop_hitbox_x, shop_hitbox_y, false, true)
 	; allow time to process - server interaction
 	Random, s, 300, 600
 	Sleep, %s%
