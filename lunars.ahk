@@ -6,7 +6,7 @@
 SpellClick(slot)
 {
 	slot -= 1 ; Adjust to zero index
-	ItemInventoryClick(slot, 5, 9, 42, 16, 1176, 439, 38, 38)
+	ItemInventoryClick(slot, 5, 9, 31, 12, 1354, 578, 29, 29)
     return
 }
 
