@@ -8,6 +8,7 @@ BoomerangClick(x, y, rightclick:=false, shiftclick:=false)
 	if(shiftclick)
 	{
 		Send {ShiftDown}
+		Sleep, 50
 	}
 	if (rightclick = true)
 	{
@@ -21,6 +22,7 @@ BoomerangClick(x, y, rightclick:=false, shiftclick:=false)
 	}
 	if(shiftclick)
 	{
+		Sleep, 50
 		Send {ShiftUp}
 	}
 	coords:= {xstart: xpos, ystart: ypos, xclicked: x, yclicked: y}
