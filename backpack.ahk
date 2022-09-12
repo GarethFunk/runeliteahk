@@ -9,7 +9,7 @@
 ; 9px gap in y
 ; origin is 1200, 454
 
-BackpackClick(slot, shiftclick=false)
+BackpackClick(slot, shiftclick:=false)
 {
 	slot -= 1 ; Adjust to zero index
 	ItemInventoryClick(slot, 4, 8, 10, 7, 1371, 588, 53, 47, false, shiftclick)
