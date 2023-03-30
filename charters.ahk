@@ -22,13 +22,6 @@ Sleep, 600
 ; Close shop
 ShopClose()
 Sleep, 600
-; Open Inventory
-OpenBackpack()
-Suspend, Off
-return
-
-2::
-Suspend, On
 ; Open spellbook
 OpenMagicMenu()
 Sleep, 600
@@ -49,7 +42,7 @@ Send, 7
 Suspend, Off
 return
 
-3::
+2::
 Suspend, On
 ; World hop
 send, ^+{RIGHT}
