@@ -1,10 +1,12 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 
+#Include mousemove.ahk
 ; Clicks and returns to original position
-BoomerangClick(x, y, rightclick:=false, shiftclick:=false)
+BoomerangClick(x, y, rightclick:=false, shiftclick:=false, boomerang:=true)
 {
 	MouseGetPos, xpos, ypos
+	MouseMove(x, y)
 	if(shiftclick)
 	{
 		Send {ShiftDown}
@@ -12,13 +14,16 @@ BoomerangClick(x, y, rightclick:=false, shiftclick:=false)
 	}
 	if (rightclick = true)
 	{
-		Click, %x% %y% Right
+		Click Right
 	}
 	else
 	{
-		Click, %x% %y%
-		; Return cursor to orignal position on left clicks
-		MouseMove, %xpos%, %ypos%
+		Click
+		if (boomerang = true)
+		{
+			; Return cursor to orignal position on left clicks
+			MouseMove(%xpos%, %ypos%)
+		}
 	}
 	if(shiftclick)
 	{
@@ -29,11 +34,11 @@ BoomerangClick(x, y, rightclick:=false, shiftclick:=false)
 	return coords
 }
 
-BoomerangHitboxClick(x, y, hitbox_w, hitbox_h, rightclick:=false, shiftclick:=false)
+BoomerangHitboxClick(x, y, hitbox_w, hitbox_h, rightclick:=false, shiftclick:=false, boomerang:=true)
 {
 	Random, xclick, 0, %hitbox_w%
 	Random, yclick, 0, %hitbox_h%
 	xclick += x
 	yclick += y
-	return BoomerangClick(xclick, yclick, rightclick, shiftclick)
+	return BoomerangClick(xclick, yclick, rightclick, shiftclick, boomerang)
 }

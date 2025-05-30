@@ -16,12 +16,7 @@ Spam() {
 		}
   
 		Random, s, 300, 600
-        MouseGetPos, x, y
-        PixelGetColor, c, %x%, %y%
-        if (c = 0x00FF00)
-        {
-		    Click
-        }
+		Click
 		Sleep, %s%
 	}
 }
