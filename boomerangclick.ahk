@@ -22,7 +22,7 @@ BoomerangClick(x, y, rightclick:=false, shiftclick:=false, boomerang:=true)
 		if (boomerang = true)
 		{
 			; Return cursor to orignal position on left clicks
-			MouseMove(%xpos%, %ypos%)
+			MouseMove(xpos, ypos)
 		}
 	}
 	if(shiftclick)
